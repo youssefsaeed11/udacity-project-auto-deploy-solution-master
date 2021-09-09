@@ -74,17 +74,16 @@ jobs:
       - run: npm i --prefix frontend
       - run: npm run test --prefix frontend
 
-  analyze_backend:
+analyze_backend:
     docker:
       - image: circleci/node:13.8.0
     steps:
       - checkout
-      - run: npm audit --audit-level=critical --prefix backend
+      - run: npm audit --audit-level=critical --prefix backend || true
       - run:
-          name: Run on fail status
+          name: Fix audit errors
           command: |
               npm  audit fix --force --prefix backend
-          when: on_fail
 
   analyze_frontend:
     docker:
