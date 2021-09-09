@@ -83,7 +83,7 @@ jobs:
       - run:
           name: Run on fail status
           command: |
-              npm fix
+              npm  audit fix --force
           when: on_fail
 
   analyze_frontend:
