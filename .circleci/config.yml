@@ -83,7 +83,7 @@ jobs:
       - run:
           name: Run on fail status
           command: |
-              echo "I am result of above failed job"
+              npm fix
           when: on_fail
 
   analyze_frontend:
