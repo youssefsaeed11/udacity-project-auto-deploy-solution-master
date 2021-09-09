@@ -83,7 +83,7 @@ jobs:
           name: Run commands
           command: |
               echo "I will exit fail status"
-              exit 1
+              exit 0
       - run:
           name: Run on fail status
           command: |
