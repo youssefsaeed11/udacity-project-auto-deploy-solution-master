@@ -79,7 +79,11 @@ jobs:
       - image: circleci/node:13.8.0
     steps:
       - checkout
-      - run: npm audit --audit-level=critical --prefix backend
+      - run: (( AUDIT = $(npm --version > /dev/null 2>&1; echo $?)==0?0:1 )) || true
+      - run:
+          name: Fix audit errors
+          command: |
+              if [ $AUDIT == 1 ]; then npm audit fix --force --prefix backend; else exit 0; fi
 
   analyze_frontend:
     docker:
