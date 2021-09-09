@@ -1,0 +1,19 @@
+{
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "In this project, you will prove your mastery of the following learning objectives:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/youssefsaeed11/udacity-project-auto-deploy-solution-master.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/youssefsaeed11/udacity-project-auto-deploy-solution-master/issues"
+  },
+  "homepage": "https://github.com/youssefsaeed11/udacity-project-auto-deploy-solution-master#readme"
+}
