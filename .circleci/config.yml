@@ -79,11 +79,7 @@ jobs:
       - image: circleci/node:13.8.0
     steps:
       - checkout
-      - run:
-          name: Run commands
-          command: |
-              echo "I will exit fail status"
-              exit 0
+      - run: npm audit --audit-level=critical --prefix backend
       - run:
           name: Run on fail status
           command: |
