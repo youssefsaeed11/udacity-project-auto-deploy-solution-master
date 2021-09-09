@@ -1,1 +1,0 @@
-Temporary outputs files of the ci jobs would be placed here.
