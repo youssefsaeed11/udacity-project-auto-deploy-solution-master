@@ -74,7 +74,7 @@ jobs:
       - run: npm i --prefix frontend
       - run: npm run test --prefix frontend
 
-   analyze_backend:
+  analyze_backend:
     docker:
       - image: circleci/node:13.8.0
     steps:
